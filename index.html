@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Creative Collaboration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-left">
+                <span class="time">17:40</span>
+                <div class="status-icons">
+                    <span class="icon">✓</span>
+                    <span class="icon">👥</span>
+                    <span class="icon">📧</span>
+                    <span class="icon">✕</span>
+                </div>
+            </div>
+            <div class="status-right">
+                <div class="signal-icons">
+                    <span class="wifi">📶</span>
+                    <span class="cellular">📶</span>
+                    <span class="battery">🔋12%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Role Selection Screen -->
+        <div class="screen" id="roleScreen">
+            <div class="header">
+                <h1 class="app-title">Team</h1>
+                <p class="subtitle">Create your account and start collaborating</p>
+            </div>
+
+            <div class="role-section">
+                <p class="section-label">Fmail</p>
+                
+                <div class="role-options">
+                    <div class="role-option" data-role="President">
+                        <span class="role-name">President</span>
+                        <div class="radio-button"></div>
+                    </div>
+                    
+                    <div class="role-option active" data-role="Storyteller">
+                        <span class="role-name">Storyteller</span>
+                        <div class="radio-button checked"></div>
+                    </div>
+                    
+                    <div class="role-option" data-role="Voice Over Artist">
+                        <span class="role-name">Voice Over Artist</span>
+                        <div class="radio-button"></div>
+                    </div>
+                    
+                    <div class="role-option" data-role="Background Creator">
+                        <span class="role-name">Background Creator</span>
+                        <div class="radio-button"></div>
+                    </div>
+                    
+                    <div class="role-option" data-role="Producer">
+                        <span class="role-name">Producer</span>
+                        <div class="radio-button"></div>
+                    </div>
+                    
+                    <div class="role-option" data-role="Animator">
+                        <span class="role-name">Animator</span>
+                        <div class="radio-button"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-section">
+                <button class="create-account-btn" id="continueBtn">Create Account</button>
+                <p class="sign-in-text">Already have an account? <a href="#" class="sign-in-link">Sign In</a></p>
+                <div class="branding">
+                    <span class="made-with">⚡ Made with Emergent</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Registration Form Screen -->
+        <div class="screen hidden" id="registerScreen">
+            <div class="header">
+                <div class="back-btn" id="backBtn">✕</div>
+                <div class="url-bar">
+                    <span class="url-icon">🔒</span>
+                    <span class="url-text">Emergent | Fullstack App</span>
+                    <span class="more-icon">⋮</span>
+                </div>
+            </div>
+
+            <div class="form-header">
+                <h1 class="form-title">Join the Creative Team</h1>
+                <p class="form-subtitle">Create your account and start collaborating</p>
+            </div>
+
+            <form class="registration-form" id="registrationForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Desired Role</label>
+                    <div class="select-wrapper">
+                        <select id="role" name="role">
+                            <option value="Storyteller">Storyteller</option>
+                            <option value="President">President</option>
+                            <option value="Voice Over Artist">Voice Over Artist</option>
+                            <option value="Background Creator">Background Creator</option>
+                            <option value="Producer">Producer</option>
+                            <option value="Animator">Animator</option>
+                        </select>
+                        <div class="select-arrow">⌄</div>
+                    </div>
+                </div>
+
+                <button type="submit" class="create-account-btn">Create Account</button>
+            </form>
+
+            <div class="branding">
+                <span class="made-with">⚡ Made with Emergent</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
