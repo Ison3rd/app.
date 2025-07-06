@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply text-gray-900 bg-gray-50;
+  }
+  
+  * {
+    @apply border-gray-200;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-4 py-2 text-sm font-medium rounded-lg border border-transparent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary-100 text-secondary-900 hover:bg-secondary-200 focus:ring-secondary-500;
+  }
+  
+  .btn-success {
+    @apply bg-success-600 text-white hover:bg-success-700 focus:ring-success-500;
+  }
+  
+  .btn-error {
+    @apply bg-error-600 text-white hover:bg-error-700 focus:ring-error-500;
+  }
+  
+  .btn-ghost {
+    @apply text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:ring-gray-500;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent placeholder-gray-400;
+  }
+  
+  .input-error {
+    @apply border-error-300 focus:ring-error-500;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm border;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .status-dot {
+    @apply w-3 h-3 rounded-full border-2 border-white;
+  }
+  
+  .status-online {
+    @apply bg-success-500;
+  }
+  
+  .status-offline {
+    @apply bg-gray-400;
+  }
+  
+  .status-busy {
+    @apply bg-error-500;
+  }
+  
+  .status-away {
+    @apply bg-warning-500;
+  }
+  
+  .role-badge {
+    @apply inline-flex items-center px-2 py-1 text-xs font-medium rounded-full;
+  }
+  
+  .role-producer {
+    @apply bg-purple-100 text-purple-800;
+  }
+  
+  .role-director {
+    @apply bg-blue-100 text-blue-800;
+  }
+  
+  .role-senior {
+    @apply bg-green-100 text-green-800;
+  }
+  
+  .role-intermediate {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+  
+  .role-junior {
+    @apply bg-gray-100 text-gray-800;
+  }
+  
+  .role-artist {
+    @apply bg-pink-100 text-pink-800;
+  }
+  
+  .role-technical {
+    @apply bg-indigo-100 text-indigo-800;
+  }
+  
+  .message-bubble {
+    @apply max-w-md px-4 py-2 rounded-lg break-words;
+  }
+  
+  .message-sent {
+    @apply bg-primary-600 text-white ml-auto;
+  }
+  
+  .message-received {
+    @apply bg-white text-gray-900 border;
+  }
+  
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: #94a3b8;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+}
